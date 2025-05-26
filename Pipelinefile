@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    stages{
+        stage('Build'){
+            steps{
+                echo('Building successfully')     
+            }
+        }
+        stage('Run'){
+            steps{
+                echo('Run successfully')
+                bat 'node app.js'
+            }
+        }
+    }
+}
