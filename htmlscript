@@ -7,13 +7,14 @@ pipeline {
                 git branch : 'main', url: 'https://github.com/velvignesh6404/p2git.git'
             }
         }
-        stage('Publish HTML'){}
+        stage('Publish HTML'){
             steps{
                 publishHTML([
                     reportDir: '.',
                     reportFiles: 'index.html',
                     reportName: 'My HTML Page'
                 ])
+            }
             }
     }
 }
