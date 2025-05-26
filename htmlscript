@@ -10,8 +10,8 @@ pipeline {
         stage('Publish HTML'){}
             steps{
                 publishHTML([
-                    reportDir: '.'
-                    reportFiles: 'index.html'
+                    reportDir: '.',
+                    reportFiles: 'index.html',
                     reportName: 'My HTML Page'
                 ])
             }
